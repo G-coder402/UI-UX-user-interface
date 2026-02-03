@@ -1,0 +1,15 @@
+div class="stack">
+  <div class="card front"> <video src="a.mp4" autoplay muted loop></video> </div>
+  <div clas<s="card back">  <video src="b.mp4" autoplay muted loop></video> </div>
+  <div class="card back2"> <video src="c.mp4" autoplay muted loop></video> </div>
+</div>
+
+<style>
+.stack { perspective: 1200px; }
+.card {
+  transform-style: preserve-3d;
+  transition: transform .45s cubic-bezier(.2,.9,.2,1), filter .3s;
+}
+.front { transform: translateZ(0) scale(1); filter: none; box-shadow: 0 12px 30px rgba(0,0,0,.25); }
+.back  { transform: translateZ(-60px) scale(.96) rotateX(4deg); filter: blur(2px) brightness(.85); }
+</style>
